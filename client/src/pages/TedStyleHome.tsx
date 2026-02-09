@@ -4,11 +4,11 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import bannerImage from "@assets/3257D3DE-079F-4708-A347-4B1A64B5DDF5_1_105_c.jpeg";
 
-const tabs = ["All", "Cricket", "Cities", "Medicine and Health", "Politics"] as const;
+const tabs = ["Cricket", "Cities", "Medicine and Healthcare", "Politics"] as const;
 type Tab = typeof tabs[number];
 
 const TedStyleHome = () => {
-  const [activeTab, setActiveTab] = useState<Tab>("All");
+  const [activeTab, setActiveTab] = useState<Tab>("Cities");
 
   const writingItems = [
     {
@@ -17,7 +17,7 @@ const TedStyleHome = () => {
       excerpt: "\"Do I have another son? Where is he now?\" asked my grandmother. Her face was scrunched, worry lines plastered across her forehead. \"Yes, you do,\" said my uncle...",
       link: "/essays/wisps-of-memory",
       category: "Essay",
-      tab: "Medicine and Health" as Tab
+      tab: "Medicine and Healthcare" as Tab
     },
     {
       title: "Forts Amid Mounds of Garbage",
@@ -61,9 +61,7 @@ const TedStyleHome = () => {
     }
   ];
 
-  const filteredItems = activeTab === "All"
-    ? writingItems
-    : writingItems.filter(item => item.tab === activeTab);
+  const filteredItems = writingItems.filter(item => item.tab === activeTab);
 
   const publications = [
     {
@@ -186,7 +184,7 @@ const TedStyleHome = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-xl font-bold mb-6">About</h2>
-              <div className="prose prose-lg max-w-none dark:prose-invert">
+              <div className="prose max-w-none dark:prose-invert">
                 <p className="mb-4">
                   Hi, I'm Rutvij. A resident doctor with interests in internal medicine, oncology, and healthcare delivery. My work brings together training in clinical medicine, social science, public health, and consulting, with the goal of expanding access to high-quality healthcare.
                 </p>
@@ -201,7 +199,7 @@ const TedStyleHome = () => {
                 </p>
                 <div className="mt-6">
                   <Link href="/about-more">
-                    <Button className="bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg transition-colors duration-200">
+                    <Button className="bg-primary hover:bg-primary/80 text-white px-6 py-2 rounded-lg transition-colors duration-200">
                       More About Me →
                     </Button>
                   </Link>
@@ -226,7 +224,7 @@ const TedStyleHome = () => {
                     onClick={() => setActiveTab(tab)}
                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
                       activeTab === tab
-                        ? "bg-blue-600 text-white"
+                        ? "bg-primary text-white"
                         : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
                     }`}
                   >
@@ -269,35 +267,36 @@ const TedStyleHome = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-xl font-bold mb-6">Research</h2>
-              
-              <div className="prose prose-lg max-w-none dark:prose-invert mb-6">
+
+              <div className="prose max-w-none dark:prose-invert mb-6">
                 <p className="mb-4">
-                  My research includes two main areas of focus:
+                  My work examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. My research centers on two main areas:
                 </p>
               </div>
-              
+
               {/* First Research Area - Callout Box */}
-              <div className="mb-6 p-4 bg-blue-50 dark:bg-blue-900/20 border border-blue-200 dark:border-blue-700 rounded-lg">
-                <p className="text-base text-blue-800 dark:text-blue-300">
-                  <strong>Studying technology-enabled care models</strong> that address unmet needs in specific patient populations
+              <div className="mb-6 p-5 bg-sky-50 dark:bg-sky-900/20 border-l-4 border-sky-300 dark:border-sky-600 rounded-r-lg">
+                <p className="text-base text-gray-900 dark:text-gray-100 font-semibold mb-2">Technology-Enabled Care Delivery</p>
+                <p className="text-base text-gray-700 dark:text-gray-300">
+                  Developing and implementing technology-enabled models of care that expand access and improve outcomes. My primary focus is now cancer care delivery, informed by my prior work in mental healthcare delivery.
                 </p>
               </div>
-              
+
               {/* Second Research Area - Callout Box */}
-              <div className="mb-6 p-4 bg-green-50 dark:bg-green-900/20 border border-green-200 dark:border-green-700 rounded-lg">
-                <div className="text-base text-green-800 dark:text-green-300">
+              <div className="mb-6 p-5 bg-sky-50 dark:bg-sky-900/20 border-l-4 border-sky-300 dark:border-sky-600 rounded-r-lg">
+                <p className="text-base text-gray-900 dark:text-gray-100 font-semibold mb-2">Health System Reform</p>
+                <div className="text-base text-gray-700 dark:text-gray-300">
                   <p className="mb-2">
-                    <strong>Investigating health system reform</strong>, with a focus on:
+                    Studying how governance and financing structures shape health system performance, including:
                   </p>
                   <ul className="list-disc pl-4 space-y-1">
                     <li>Strengthening state capacity</li>
-                    <li>Exploring innovative financing mechanisms, including value-based care</li>
-                    <li>Examining socioeconomic determinants that shape health outcomes</li>
+                    <li>Innovative financing models such as value-based care</li>
                   </ul>
                 </div>
               </div>
               
-              <div className="prose prose-lg max-w-none dark:prose-invert mb-6">
+              <div className="prose max-w-none dark:prose-invert mb-6">
                 <p className="mb-6">
                   Academic and peer-reviewed publications can be found at{' '}
                   <a 
