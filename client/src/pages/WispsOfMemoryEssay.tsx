@@ -1,0 +1,191 @@
+import { motion } from "framer-motion";
+import { ArrowLeft } from "lucide-react";
+import { Link } from "wouter";
+import { calculateReadingTime } from "../lib/utils";
+
+const WispsOfMemoryEssay = () => {
+  const essayText = `
+    "Do I have another son? Where is he now?" asked my grandmother. Her face was scrunched, worry lines plastered across her forehead. "Yes, you do," said my uncle. "He lives in Dubai, and his son studies in the United States." She smiled and nodded, eyes sparkling with appreciation. And yet, a few minutes later, she asked the same question again.
+
+    My grandmother's dementia diagnosis and associated memory loss crept up on us. Initially, this was a source of misplaced mirth and general chaos. She would forget where she had left her treasured items and summon the household to conduct a search operation. Next, she lost the ability to make new memories, and then, with a stealthy finality, she began to forget the major events of her life. The emigration of her youngest son. The marriage of her first grandchild. The collapse of our old house due to shoddy construction with the entire family in residence. The death of her husband from a sudden cardiac arrest at the age of fifty-four. How does it feel to inhabit such a mind?
+
+    The psychologist Daniel Kahneman, who passed away in March 2024, extensively studied memory. As he put it, "How do you understand memory? You don't study memory. You study forgetting." The only discernible pattern evident in my grandmother's forgetting was her profound unawareness of having a memory deficit. There were brief flashes of insight, where she would display discomfort with having forgotten a central event or person in her life. However, for the most part, she did not perceive that she was becoming dislocated from her past. This lack of insight into our illness is known as anosognosia, and I find it to be the most distressing aspect of dementia. In Thinking Fast and Slow, Kahneman draws a distinction between the "experiencing self" and the "remembering self." He writes that the experiencing self exists in and knows only the present, while the remembering self is a storyteller, interpreting our experiences and narrating them back to us.
+
+    In Kahneman's framework, we live under the "tyranny of the remembering self" as the stories told to us by the remembering self shape how we think of past events in the present, and how we make related choices in the future. The remembering self enables us to recollect, construct meaning, and live our narratives. Anosognosia is the failure of the remembering self, resulting in an inability to update our narratives, and a consequent detachment from reality.
+
+    In moments of quiet, we sift through events from our past. Memories of joy, of transcendence, and of pain. Our lives are composed of distinct moments that aggregate into a tapestry, a tapestry splotched with light and dark, pleasure and pain. This centrality of memory is conveyed by the Punjabi poet Amrita Pritam, in her most famous poem, "Main Tenu Phir Milangi" ("I Will Meet You Again"). She writes:
+
+    Ae jism mukkda hai
+    Tan sab kuch mukk janda-e
+    Par cheteyan dey dhaage
+    Kaayenaati kana dey hunde
+
+    This body? It perishes.
+    Everything does.
+    But the threads of memory
+    Are woven such
+    That the universe resides in its every bead
+
+    In my grandmother's case, the opposite was true. Her body was functional in the context of her advanced age, but her memories had dissipated, slipping like grains of sand through grasping fingers.
+
+    The pathophysiology of Alzheimer's disease, the subtype of dementia that afflicts my grandmother, remains an active area of research. Hypotheses now point toward insidious neurodegeneration mediated through chronic inflammatory and autoimmune processes. The unfortunate fuzziness around its pathophysiology is fitting for a disease that catalyzes a unique rupture from the self in a patient. Memory and meaning-making are central to personhood. We moor ourselves in the past, in the present, and in our hopes for the future. When memory fractures, so does the self.
+
+    We noticed that it was now impossible for my grandmother to remain unoccupied. Often, she would sit in her favorite armchair in the living room, eyes fixed on the newspaper. Twenty minutes later, she was still on the same page. Was she reading the same sentence again and again? Was this pretense at reading an attempt to occupy her mind in an activity as there was no escape into her own story?
+
+    Storytelling is central to our shared understanding of what it means to be human. The writer and climate activist Amitav Ghosh has suggested that storytelling is seen as a distinctively human trait in the collective imagination of post-Industrial Revolution societies. He cites a passage from Graham Swift's 1983 novel Waterland, a seminal work in the corpus of nature writing. "Only animals," says one of Swift's characters, "live entirely in the Here and Now. Only nature knows neither memory nor history." But what happens when we lose the ability to tell our stories?
+
+    For as long as I could remember, my grandmother ran the house. She lost her husband while she was in her fifties. There was a legal battle over the house to be fought, children to be educated, husbands and wives to be found. She was the totem around which the household revolved, its rhythms and cadences attuned to her habits. Frivolity was not tolerated; there was too much to do against a backdrop of uncertainty. And now, in her nineties, dementia had made her a child again. We spoke to her in measured tones, as if she were fragile, which she was.
+
+    In the early days of the disease, she developed a paranoid obsession centered on her room. She was reluctant to leave her room and kept tabs on anyone who walked in that general direction. Over time, the locus of her paranoia slowly shifted to her closet. She started to closely guard the keys to her closet and suffered from vivid delusions that we were opening the closet doors to steal her possessions. Eventually, her paranoia shifted to quotidian objects like her glasses and her watch. The room and the closet were forgotten, but her glasses and watch had to always remain within sight. Most alarmingly, she began to shun company, lying in bed for hours in the sticky summer heat, reacting with aggression when cajoled to emerge for meals. As her cognitive powers shrank, so did her world, contracting from the house to her room to her closet to the objects immediately around her. It was as if she could no longer respond appropriately to cues from a bewildering physical world.
+
+    Many of these observations are textbook: Frontal lobe deficits due to synaptic dysfunction and neuroinflammation can hamper impulse control and emotional regulation. As a medical student, I could recognize these symptoms and understand the clinical progression of her disease. However, when a warm, loving human undergoes such a radical shift in personality, the sterile language of medicine offers little comfort, and it can obscure more than it reveals about the experience of illness.
+
+    If there is a season for storytelling in India, it is the tropical monsoon. On the western coast, in the first weeks of June, rain-laden clouds come in from the Arabian Sea, and the summer heat drops by a few degrees. Fat raindrops hammer against the windows, and storms stretch into the night. During these long nights, my grandmother would perch on the bed and tell us glorious tales. Stories of an uncle's wife who ran away and never returned. Life under the last years of the British Raj, an oral history of the benefits and grievances of living under colonialism. This year, as the clouds gather, we will tell her the same stories that she told us, trying to recreate the past and weave that lost tapestry of memories in her mind.
+
+    As an exercise, this is futile. And yet, this is the essence of caregiving. To stay with those who are sick, to bear witness, to make meaning together for a moment. To watch as the last wisps of my grandmother's memories slip like fine grains of sand through her grasping fingers. In short, to accompany.
+  `;
+  
+  const readingTime = calculateReadingTime(essayText);
+  
+  return (
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+          className="max-w-4xl mx-auto"
+        >
+          <Link href="/">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="inline-flex items-center gap-2 text-primary hover:text-primary/80 mb-8 font-medium"
+            >
+              <ArrowLeft size={20} />
+              Back to Portfolio
+            </motion.button>
+          </Link>
+
+          <article className="prose prose-lg max-w-none dark:prose-invert">
+            <header className="mb-12">
+              <h1 className="text-4xl md:text-5xl font-bold mb-6 text-gray-900 dark:text-white">
+                Wisps of Memory, Grains of Sand
+              </h1>
+              
+              <div className="mb-6 p-4 bg-gray-50 dark:bg-gray-800 rounded-lg border-l-4 border-primary">
+                <p className="text-gray-700 dark:text-gray-300 mb-2">
+                  <strong>Publication:</strong> This essay was published in Volume 14 of the Narrateur.
+                </p>
+                <p className="text-gray-600 dark:text-gray-400">
+                  <a 
+                    href="https://medicine.hofstra.edu/sites/medicine.hofstra.edu/files/2025-05/narrateur-volume-14.pdf" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 underline"
+                  >
+                    View the published version here
+                  </a>
+                </p>
+                <p className="text-sm text-gray-500 dark:text-gray-500 mt-2">
+                  Text has been reproduced below.
+                </p>
+              </div>
+              
+              <time className="text-gray-500 dark:text-gray-500 mb-4">2024</time>
+              
+              {/* Reading Time Estimator */}
+              <div className="mb-8 p-3 bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg">
+                <div className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polyline points="12,6 12,12 16,14"/>
+                  </svg>
+                  <span>
+                    {readingTime.minutes} min read · {readingTime.words} words
+                  </span>
+                </div>
+              </div>
+            </header>
+
+            <div className="text-gray-700 dark:text-gray-300 space-y-6 leading-relaxed">
+              <p>
+                "Do I have another son? Where is he now?" asked my grandmother. Her face was scrunched, worry lines plastered across her forehead. "Yes, you do," said my uncle. "He lives in Dubai, and his son studies in the United States." She smiled and nodded, eyes sparkling with appreciation. And yet, a few minutes later, she asked the same question again.
+              </p>
+
+              <p>
+                My grandmother's dementia diagnosis and associated memory loss crept up on us. Initially, this was a source of misplaced mirth and general chaos. She would forget where she had left her treasured items and summon the household to conduct a search operation. Next, she lost the ability to make new memories, and then, with a stealthy finality, she began to forget the major events of her life. The emigration of her youngest son. The marriage of her first grandchild. The collapse of our old house due to shoddy construction with the entire family in residence. The death of her husband from a sudden cardiac arrest at the age of fifty-four. How does it feel to inhabit such a mind?
+              </p>
+
+              <p>
+                The psychologist Daniel Kahneman, who passed away in March 2024, extensively studied memory. As he put it, "How do you understand memory? You don't study memory. You study forgetting." The only discernible pattern evident in my grandmother's forgetting was her profound unawareness of having a memory deficit. There were brief flashes of insight, where she would display discomfort with having forgotten a central event or person in her life. However, for the most part, she did not perceive that she was becoming dislocated from her past. This lack of insight into our illness is known as anosognosia, and I find it to be the most distressing aspect of dementia. In <em>Thinking Fast and Slow</em>, Kahneman draws a distinction between the "experiencing self" and the "remembering self." He writes that the experiencing self exists in and knows only the present, while the remembering self is a storyteller, interpreting our experiences and narrating them back to us.
+              </p>
+
+              <p>
+                In Kahneman's framework, we live under the "tyranny of the remembering self" as the stories told to us by the remembering self shape how we think of past events in the present, and how we make related choices in the future. The remembering self enables us to recollect, construct meaning, and live our narratives. Anosognosia is the failure of the remembering self, resulting in an inability to update our narratives, and a consequent detachment from reality.
+              </p>
+
+              <p>
+                In moments of quiet, we sift through events from our past. Memories of joy, of transcendence, and of pain. Our lives are composed of distinct moments that aggregate into a tapestry, a tapestry splotched with light and dark, pleasure and pain. This centrality of memory is conveyed by the Punjabi poet Amrita Pritam, in her most famous poem, "Main Tenu Phir Milangi" ("I Will Meet You Again"). She writes:
+              </p>
+
+              <blockquote className="border-l-4 border-primary pl-6 py-4 italic text-lg bg-gray-50 dark:bg-gray-800 rounded-r-lg">
+                <p>
+                  Ae jism mukkda hai<br />
+                  Tan sab kuch mukk janda-e<br />
+                  Par cheteyan dey dhaage<br />
+                  Kaayenaati kana dey hunde
+                </p>
+                <p className="mt-4">
+                  This body? It perishes.<br />
+                  Everything does.<br />
+                  But the threads of memory<br />
+                  Are woven such<br />
+                  That the universe resides in its every bead
+                </p>
+              </blockquote>
+
+              <p>
+                In my grandmother's case, the opposite was true. Her body was functional in the context of her advanced age, but her memories had dissipated, slipping like grains of sand through grasping fingers.
+              </p>
+
+              <p>
+                The pathophysiology of Alzheimer's disease, the subtype of dementia that afflicts my grandmother, remains an active area of research. Hypotheses now point toward insidious neurodegeneration mediated through chronic inflammatory and autoimmune processes. The unfortunate fuzziness around its pathophysiology is fitting for a disease that catalyzes a unique rupture from the self in a patient. Memory and meaning-making are central to personhood. We moor ourselves in the past, in the present, and in our hopes for the future. When memory fractures, so does the self.
+              </p>
+
+              <p>
+                We noticed that it was now impossible for my grandmother to remain unoccupied. Often, she would sit in her favorite armchair in the living room, eyes fixed on the newspaper. Twenty minutes later, she was still on the same page. Was she reading the same sentence again and again? Was this pretense at reading an attempt to occupy her mind in an activity as there was no escape into her own story?
+              </p>
+
+              <p>
+                Storytelling is central to our shared understanding of what it means to be human. The writer and climate activist Amitav Ghosh has suggested that storytelling is seen as a distinctively human trait in the collective imagination of post-Industrial Revolution societies. He cites a passage from Graham Swift's 1983 novel <em>Waterland</em>, a seminal work in the corpus of nature writing. "Only animals," says one of Swift's characters, "live entirely in the Here and Now. Only nature knows neither memory nor history." But what happens when we lose the ability to tell our stories?
+              </p>
+
+              <p>
+                For as long as I could remember, my grandmother ran the house. She lost her husband while she was in her fifties. There was a legal battle over the house to be fought, children to be educated, husbands and wives to be found. She was the totem around which the household revolved, its rhythms and cadences attuned to her habits. Frivolity was not tolerated; there was too much to do against a backdrop of uncertainty. And now, in her nineties, dementia had made her a child again. We spoke to her in measured tones, as if she were fragile, which she was.
+              </p>
+
+              <p>
+                In the early days of the disease, she developed a paranoid obsession centered on her room. She was reluctant to leave her room and kept tabs on anyone who walked in that general direction. Over time, the locus of her paranoia slowly shifted to her closet. She started to closely guard the keys to her closet and suffered from vivid delusions that we were opening the closet doors to steal her possessions. Eventually, her paranoia shifted to quotidian objects like her glasses and her watch. The room and the closet were forgotten, but her glasses and watch had to always remain within sight. Most alarmingly, she began to shun company, lying in bed for hours in the sticky summer heat, reacting with aggression when cajoled to emerge for meals. As her cognitive powers shrank, so did her world, contracting from the house to her room to her closet to the objects immediately around her. It was as if she could only respond appropriately to cues from a bewildering physical world.
+              </p>
+
+              <p>
+                Many of these observations are textbook: Frontal lobe deficits due to synaptic dysfunction and neuroinflammation can hamper impulse control and emotional regulation. As a medical student, I could recognize these symptoms and understand the clinical progression of her disease. However, when a warm, loving human undergoes such a radical shift in personality, the sterile language of medicine offers little comfort, and it can obscure more than it reveals about the experience of illness.
+              </p>
+
+              <p>
+                If there is a season for storytelling in India, it is the tropical monsoon. On the western coast, in the first weeks of June, rain-laden clouds come in from the Arabian Sea, and the summer heat drops by a few degrees. Fat raindrops hammer against the windows, and storms stretch into the night. During these long nights, my grandmother would perch on the bed and tell us glorious tales. Stories of an uncle's wife who ran away and never returned. Life under the last years of the British Raj, an oral history of the benefits and grievances of living under colonialism. This year, as the clouds gather, we will tell her the same stories that she told us, trying to recreate the past and weave that lost tapestry of memories in her mind.
+              </p>
+
+              <p>
+                As an exercise, this is futile. And yet, this is the essence of caregiving. To stay with those who are sick, to bear witness, to make meaning together for a moment. To watch as the last wisps of my grandmother's memories slip like fine grains of sand through her grasping fingers. In short, to accompany.
+              </p>
+            </div>
+          </article>
+        </motion.div>
+      </div>
+    </div>
+  );
+};
+
+export default WispsOfMemoryEssay;
