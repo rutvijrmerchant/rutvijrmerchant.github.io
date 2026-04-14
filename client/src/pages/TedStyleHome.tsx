@@ -160,16 +160,16 @@ const TedStyleHome = () => {
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">About</h2>
               <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
-                  Hi, I'm Rutvij. A resident doctor with interests in internal medicine, oncology, and healthcare delivery. My work brings together training in clinical medicine, social science, public health, and consulting, with the goal of expanding access to high-quality healthcare.
+                  Hi, I'm Rutvij. A resident doctor with interests in internal medicine, oncology, and healthcare delivery. My work brings together training in clinical medicine, social science, public health, and consulting, with the goal of expanding access to high-quality care.
                 </p>
                 <p>
-                  I earned my MD at the Icahn School of Medicine at Mount Sinai. I hold an MPH from the Harvard T.H. Chan School of Public Health, where I focused on healthcare delivery and health systems. I completed my undergraduate studies at Northwestern University, studying Political Science and Economics.
+                  I received my MD from the Icahn School of Medicine at Mount Sinai. Previously, I earned an MPH from the Harvard T.H. Chan School of Public Health. I completed my undergraduate studies at Northwestern University, studying Political Science and Economics.
                 </p>
                 <p>
                   Outside of medicine, I moonlight as a writer. I also maintain a deep interest in Indian history and politics. Other enduring interests include Test cricket, wildlife conservation, literary fiction, and overpriced cups of coffee.
                 </p>
                 <p>
-                  The header shows the view from the window in the living room of the family home in Breach Candy, Mumbai, a vantage point from which many ideas and dreams have been conceived, discarded, and reimagined.
+                  The header shows the view from the family home in Breach Candy, Mumbai, a vantage point from which many dreams have been conceived, discarded, and reimagined.
                 </p>
                 <div className="pt-2">
                   <Link
@@ -193,7 +193,7 @@ const TedStyleHome = () => {
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Research</h2>
 
               <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                My work examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. My research centers on two main areas:
+                My research examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. This work is focused on two complementary areas:
               </p>
 
               <div className="space-y-4 mb-8">
@@ -207,7 +207,7 @@ const TedStyleHome = () => {
                 <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
                   <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">Health System Reform</p>
                   <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Examining how the design of health systems shapes their ability to deliver high-quality, equitable care. Areas of interest include enhancing state capacity to govern health systems and studying alternative, value-based payment models.
+                    Examining how health system design shapes the ability of systems to deliver high-quality, equitable care. Areas of interest include strengthening state capacity to govern health systems and studying alternative value-based payment models.
                   </p>
                 </div>
               </div>
