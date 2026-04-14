@@ -98,8 +98,8 @@ const TedStyleHome = () => {
               <ul className="space-y-3 text-sm">
                 {[
                   { href: "#about", label: "About" },
-                  { href: "#writing", label: "Writing" },
                   { href: "#research", label: "Research" },
+                  { href: "#writing", label: "Writing" },
                   { href: "#ideas", label: "Ideas" },
                 ].map(({ href, label }) => (
                   <li key={href}>
@@ -158,7 +158,7 @@ const TedStyleHome = () => {
               transition={{ duration: 0.5 }}
             >
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">About</h2>
-              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+              <div className="space-y-4 text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
                   Hi, I'm Rutvij. A resident doctor with interests in internal medicine, oncology, and healthcare delivery. My work brings together training in clinical medicine, social science, public health, and consulting, with the goal of expanding access to high-quality healthcare.
                 </p>
@@ -180,6 +180,50 @@ const TedStyleHome = () => {
                   </Link>
                 </div>
               </div>
+            </motion.section>
+
+            {/* Research Section */}
+            <motion.section
+              id="research"
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+            >
+              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Research</h2>
+
+              <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                My work examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. My research centers on two main areas:
+              </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">Technology-Enabled Care Delivery</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Developing and implementing technology-enabled models of care that expand access and improve outcomes. My primary focus is cancer care delivery, informed by prior work in global mental health.
+                  </p>
+                </div>
+
+                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">Health System Reform</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Examining how the design of health systems shapes their ability to deliver high-quality, equitable care. Areas of interest include enhancing state capacity to govern health systems and studying alternative, value-based payment models.
+                  </p>
+                </div>
+              </div>
+
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Academic and peer-reviewed publications are available on{" "}
+                <a
+                  href="https://scholar.google.com/citations?user=ju_E5LwAAAAJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-gray-900 dark:text-white border-b border-gray-400 dark:border-gray-500 hover:border-gray-900 dark:hover:border-white transition-colors"
+                >
+                  Google Scholar
+                </a>
+                .
+              </p>
             </motion.section>
 
             {/* Writing Section */}
@@ -239,50 +283,6 @@ const TedStyleHome = () => {
                   ))
                 )}
               </div>
-            </motion.section>
-
-            {/* Research Section */}
-            <motion.section
-              id="research"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Research</h2>
-
-              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                My work examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. My research centers on two main areas:
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
-                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">Technology-Enabled Care Delivery</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Developing and implementing technology-enabled models of care that expand access and improve outcomes. My primary focus is now cancer care delivery, informed by prior work in mental healthcare delivery.
-                  </p>
-                </div>
-
-                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
-                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">Health System Reform</p>
-                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Studying how governance and financing structures shape health system performance — including strengthening state capacity and exploring innovative financing models such as value-based care.
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-sm text-gray-600 dark:text-gray-400">
-                Academic and peer-reviewed publications are available on{" "}
-                <a
-                  href="https://scholar.google.com/citations?user=ju_E5LwAAAAJ"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-medium text-gray-900 dark:text-white border-b border-gray-400 dark:border-gray-500 hover:border-gray-900 dark:hover:border-white transition-colors"
-                >
-                  Google Scholar
-                </a>
-                .
-              </p>
             </motion.section>
 
             {/* Ideas Section */}
