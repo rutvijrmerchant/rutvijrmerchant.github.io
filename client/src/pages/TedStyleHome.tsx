@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { Link } from "wouter";
-import { Button } from "@/components/ui/button";
+import { Mail, Linkedin, GraduationCap } from "lucide-react";
 import bannerImage from "@assets/3257D3DE-079F-4708-A347-4B1A64B5DDF5_1_105_c.jpeg";
 
 const tabs = ["Cricket", "Cities", "Medicine and Healthcare", "Politics"] as const;
@@ -63,109 +63,83 @@ const TedStyleHome = () => {
 
   const filteredItems = writingItems.filter(item => item.tab === activeTab);
 
-  const publications = [
-    {
-      authors: "Merchant RR, Author B, Author C",
-      title: "Technology-enabled care models for underserved populations",
-      journal: "Health Affairs",
-      year: "2024",
-      doi: "10.1377/hlthaff.2024.example",
-      status: "In press"
-    },
-    {
-      authors: "Author A, Merchant RR, Author C",
-      title: "Health system reform and state capacity building",
-      journal: "New England Journal of Medicine",
-      year: "2023",
-      doi: "10.1056/NEJMp2300000",
-      status: "Published"
-    }
-  ];
-
-  const books = [
-    {
-      title: "The Remains of the Day",
-      author: "Kazuo Ishiguro",
-      description: "A haunting tale of duty, regret, and the quiet tragedy of a life unlived."
-    },
-    {
-      title: "Educated",
-      author: "Tara Westover",
-      description: "A powerful memoir about education, family, and the struggle between loyalty and self-discovery."
-    },
-    {
-      title: "The God of Small Things",
-      author: "Arundhati Roy",
-      description: "A lyrical exploration of love, loss, and the complexities of family in post-colonial India."
-    }
-  ];
-
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-gray-100">
       {/* Header Image */}
       <div className="w-full h-64 md:h-80 overflow-hidden">
-        <img 
-          src={bannerImage} 
-          alt="View from Mumbai" 
+        <img
+          src={bannerImage}
+          alt="View from Mumbai"
           className="w-full h-full object-cover"
         />
       </div>
-      
+
       <div className="max-w-4xl pl-4 pr-4 md:pl-8 md:pr-0 py-12">
-        {/* Name */}
-        <motion.header 
+        {/* Name & Credentials */}
+        <motion.header
           className="mb-12"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          <h1 className="text-2xl font-bold mb-4">Rutvij R. Merchant</h1>
+          <h1 className="text-2xl font-bold mb-4 tracking-tight">Rutvij R. Merchant</h1>
           <div className="text-gray-600 dark:text-gray-400 mb-6 space-y-1">
-            <p className="text-lg font-medium">MD MPH</p>
-            <p className="text-base">Internal Medicine Resident at BI Deaconess Medical Centre</p>
-            <p className="text-base italic">Resident doctor, researcher, writer</p>
+            <p className="text-base font-semibold text-gray-800 dark:text-gray-200">MD MPH</p>
+            <p className="text-base">Internal Medicine Resident, Beth Israel Deaconess Medical Center</p>
+            <p className="text-sm text-gray-500 dark:text-gray-400 italic">Physician · Researcher · Writer</p>
           </div>
         </motion.header>
 
-        {/* Two Column Layout - Left aligned */}
+        {/* Two Column Layout */}
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Left Navigation */}
-          <div className="md:col-span-1 md:border-r-2 md:border-gray-400 md:dark:border-gray-500 md:pr-8">
+          <div className="md:col-span-1 md:border-r md:border-gray-300 md:dark:border-gray-600 md:pr-8">
             <nav className="sticky top-8">
-              <ul className="space-y-2 text-sm">
-                <li><a href="#about" className="font-bold hover:text-blue-600 transition-colors">About</a></li>
-                <li><a href="#writing" className="font-bold hover:text-blue-600 transition-colors">Writing</a></li>
-                <li><a href="#research" className="font-bold hover:text-blue-600 transition-colors">Research</a></li>
-                <li><a href="#ideas" className="font-bold hover:text-blue-600 transition-colors">Ideas</a></li>
+              <ul className="space-y-3 text-sm">
+                {[
+                  { href: "#about", label: "About" },
+                  { href: "#writing", label: "Writing" },
+                  { href: "#research", label: "Research" },
+                  { href: "#ideas", label: "Ideas" },
+                ].map(({ href, label }) => (
+                  <li key={href}>
+                    <a
+                      href={href}
+                      className="font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    >
+                      {label}
+                    </a>
+                  </li>
+                ))}
               </ul>
-              
+
               {/* Contact Icons */}
               <div className="mt-6 pt-4 border-t border-gray-200 dark:border-gray-700">
-                <div className="flex gap-3">
-                  <a 
-                    href="mailto:rutvij.merchant@gmail.com" 
-                    className="text-gray-600 hover:text-blue-600 transition-colors text-lg"
+                <div className="flex gap-4 items-center">
+                  <a
+                    href="mailto:rutvij.merchant@gmail.com"
+                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
                     title="Email"
                   >
-                    ✉️
+                    <Mail size={18} />
                   </a>
-                  <a 
-                    href="https://www.linkedin.com/notifications/?filter=all" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-gray-600 hover:text-blue-600 transition-colors text-lg"
+                  <a
+                    href="https://www.linkedin.com/in/rutvij-merchant-0a687588/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
                     title="LinkedIn"
                   >
-                    💼
+                    <Linkedin size={18} />
                   </a>
-                  <a 
-                    href="https://x.com/home" 
-                    target="_blank" 
-                    rel="noopener noreferrer" 
-                    className="text-gray-600 hover:text-blue-600 transition-colors text-lg"
-                    title="Twitter"
+                  <a
+                    href="https://scholar.google.com/citations?user=ju_E5LwAAAAJ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-500 hover:text-gray-900 dark:hover:text-white transition-colors"
+                    title="Google Scholar"
                   >
-                    🐦
+                    <GraduationCap size={18} />
                   </a>
                 </div>
               </div>
@@ -173,58 +147,60 @@ const TedStyleHome = () => {
           </div>
 
           {/* Right Content */}
-          <div className="md:col-span-3 space-y-12">
-            {/* About Section - Updated */}
-            <motion.section 
+          <div className="md:col-span-3 space-y-16">
+
+            {/* About Section */}
+            <motion.section
               id="about"
-              className="mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-xl font-bold mb-6">About</h2>
-              <div className="prose max-w-none dark:prose-invert">
-                <p className="mb-4">
+              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">About</h2>
+              <div className="space-y-4 text-gray-700 dark:text-gray-300 leading-relaxed">
+                <p>
                   Hi, I'm Rutvij. A resident doctor with interests in internal medicine, oncology, and healthcare delivery. My work brings together training in clinical medicine, social science, public health, and consulting, with the goal of expanding access to high-quality healthcare.
                 </p>
-                <p className="mb-4">
+                <p>
                   I earned my MD at the Icahn School of Medicine at Mount Sinai. I hold an MPH from the Harvard T.H. Chan School of Public Health, where I focused on healthcare delivery and health systems. I completed my undergraduate studies at Northwestern University, studying Political Science and Economics.
                 </p>
-                <p className="mb-4">
-                  → Outside of medicine, I moonlight as a writer. I also maintain a deep interest in Indian history and politics. Some of my writing can be found below. Other enduring interests include Test cricket, wildlife conservation, literary fiction, and overpriced cups of coffee.
+                <p>
+                  Outside of medicine, I moonlight as a writer. I also maintain a deep interest in Indian history and politics. Other enduring interests include Test cricket, wildlife conservation, literary fiction, and overpriced cups of coffee.
                 </p>
-                <p className="mb-4">
-                  → The header shows the view from the window in the living room of the family home in Breach Candy, Mumbai, a vantage point from which many ideas and dreams have been conceived, discarded, and reimagined.
+                <p>
+                  The header shows the view from the window in the living room of the family home in Breach Candy, Mumbai, a vantage point from which many ideas and dreams have been conceived, discarded, and reimagined.
                 </p>
-                <div className="mt-6">
-                  <Link href="/about-more">
-                    <Button className="bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-600 dark:text-gray-400 px-6 py-2 rounded-lg transition-colors duration-200">
-                      More About Me →
-                    </Button>
+                <div className="pt-2">
+                  <Link
+                    href="/about-more"
+                    className="inline-flex items-center gap-1.5 text-sm font-medium text-gray-900 dark:text-white border-b border-gray-400 dark:border-gray-500 hover:border-gray-900 dark:hover:border-white transition-colors pb-0.5"
+                  >
+                    More about me →
                   </Link>
                 </div>
               </div>
             </motion.section>
 
-            {/* Writing Section - Blog Style */}
-            <motion.section 
+            {/* Writing Section */}
+            <motion.section
               id="writing"
-              className="mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-xl font-bold mb-6">Writing</h2>
+              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Writing</h2>
+
+              {/* Tabs */}
               <div className="flex flex-wrap gap-2 mb-8">
                 {tabs.map((tab) => (
                   <button
                     key={tab}
                     onClick={() => setActiveTab(tab)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                    className={`px-3 py-1.5 rounded text-sm font-medium transition-colors ${
                       activeTab === tab
-                        ? "bg-sky-300 text-gray-800"
+                        ? "bg-gray-900 text-white dark:bg-white dark:text-gray-900"
                         : "bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 hover:bg-gray-200 dark:hover:bg-gray-700"
                     }`}
                   >
@@ -232,102 +208,94 @@ const TedStyleHome = () => {
                   </button>
                 ))}
               </div>
-              <div className="space-y-10">
-                {filteredItems.map((item, index) => (
-                  <article key={index} className="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
-                    <Link href={item.link} className="block group mb-4">
-                      <h3 className="text-lg font-semibold mb-2 group-hover:text-blue-600 transition-colors">
-                        {item.title}
-                      </h3>
-                    </Link>
-                    
-                    <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 mb-4">
-                      <time className="font-medium">{item.date}</time>
-                      <span>•</span>
-                      <span className="px-2 py-1 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-full text-xs font-medium">
-                        {item.category}
-                      </span>
-                    </div>
-                    
-                    <p className="text-gray-900 dark:text-gray-100 leading-relaxed">
-                      {item.excerpt}
-                    </p>
-                  </article>
-                ))}
+
+              {/* Writing Items */}
+              <div className="space-y-8">
+                {filteredItems.length === 0 ? (
+                  <p className="text-gray-500 dark:text-gray-400 italic">No pieces in this category yet.</p>
+                ) : (
+                  filteredItems.map((item, index) => (
+                    <article key={index} className="border-b border-gray-100 dark:border-gray-800 pb-8 last:border-0">
+                      <div className="flex items-center gap-3 text-xs text-gray-500 dark:text-gray-400 mb-2">
+                        <time>{item.date}</time>
+                        <span>·</span>
+                        <span className="uppercase tracking-wide">{item.category}</span>
+                      </div>
+                      <Link href={item.link} className="block group mb-2">
+                        <h3 className="text-base font-semibold text-gray-900 dark:text-white group-hover:text-gray-600 dark:group-hover:text-gray-300 transition-colors">
+                          {item.title}
+                        </h3>
+                      </Link>
+                      <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                        {item.excerpt}
+                      </p>
+                      <Link
+                        href={item.link}
+                        className="inline-block mt-3 text-xs font-medium text-gray-500 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors"
+                      >
+                        Read →
+                      </Link>
+                    </article>
+                  ))
+                )}
               </div>
             </motion.section>
 
             {/* Research Section */}
-            <motion.section 
+            <motion.section
               id="research"
-              className="mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-xl font-bold mb-6">Research</h2>
+              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Research</h2>
 
-              <div className="prose max-w-none dark:prose-invert mb-6">
-                <p className="mb-4">
-                  My work examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. My research centers on two main areas:
-                </p>
-              </div>
+              <p className="text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
+                My work examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. My research centers on two main areas:
+              </p>
 
-              {/* First Research Area - Callout Box */}
-              <div className="mb-6 p-5 bg-sky-50 dark:bg-sky-900/20 border-l-4 border-sky-300 dark:border-sky-600 rounded-r-lg">
-                <p className="text-base text-gray-900 dark:text-gray-100 font-semibold mb-2">Technology-Enabled Care Delivery</p>
-                <p className="text-base text-gray-700 dark:text-gray-300">
-                  Developing and implementing technology-enabled models of care that expand access and improve outcomes. My primary focus is now cancer care delivery, informed by my prior work in mental healthcare delivery.
-                </p>
-              </div>
-
-              {/* Second Research Area - Callout Box */}
-              <div className="mb-6 p-5 bg-sky-50 dark:bg-sky-900/20 border-l-4 border-sky-300 dark:border-sky-600 rounded-r-lg">
-                <p className="text-base text-gray-900 dark:text-gray-100 font-semibold mb-2">Health System Reform</p>
-                <div className="text-base text-gray-700 dark:text-gray-300">
-                  <p className="mb-2">
-                    Studying how governance and financing structures shape health system performance, including:
+              <div className="space-y-4 mb-8">
+                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">Technology-Enabled Care Delivery</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Developing and implementing technology-enabled models of care that expand access and improve outcomes. My primary focus is now cancer care delivery, informed by prior work in mental healthcare delivery.
                   </p>
-                  <ul className="list-disc pl-4 space-y-1">
-                    <li>Strengthening state capacity</li>
-                    <li>Innovative financing models such as value-based care</li>
-                  </ul>
+                </div>
+
+                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
+                  <p className="text-sm font-semibold text-gray-900 dark:text-white mb-1.5">Health System Reform</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400 leading-relaxed">
+                    Studying how governance and financing structures shape health system performance — including strengthening state capacity and exploring innovative financing models such as value-based care.
+                  </p>
                 </div>
               </div>
-              
-              <div className="prose max-w-none dark:prose-invert mb-6">
-                <p className="mb-6">
-                  Academic and peer-reviewed publications can be found at{' '}
-                  <a 
-                    href="https://scholar.google.com/citations?user=YOUR_ID" 
-                    target="_blank" 
-                    rel="noopener noreferrer"
-                    className="text-blue-600 hover:text-blue-800 underline"
-                  >
-                    Google Scholar
-                  </a>
-                </p>
-              </div>
+
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Academic and peer-reviewed publications are available on{" "}
+                <a
+                  href="https://scholar.google.com/citations?user=ju_E5LwAAAAJ"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="font-medium text-gray-900 dark:text-white border-b border-gray-400 dark:border-gray-500 hover:border-gray-900 dark:hover:border-white transition-colors"
+                >
+                  Google Scholar
+                </a>
+                .
+              </p>
             </motion.section>
 
             {/* Ideas Section */}
-            <motion.section 
+            <motion.section
               id="ideas"
-              className="mb-12"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-xl font-bold mb-6">Ideas</h2>
-              <div className="p-6 bg-gray-50 dark:bg-gray-800/50 rounded-lg border border-gray-200 dark:border-gray-700">
-                <p className="text-gray-600 dark:text-gray-400 text-center italic">
-                  Coming soon
-                </p>
-              </div>
+              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Ideas</h2>
+              <p className="text-sm text-gray-500 dark:text-gray-400 italic">Coming soon.</p>
             </motion.section>
-
 
           </div>
         </div>
