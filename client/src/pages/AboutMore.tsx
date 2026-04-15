@@ -23,7 +23,7 @@ const AboutMore: React.FC = () => {
           <div className="space-y-10">
             <div>
               <h2 className="text-lg font-semibold mb-4 uppercase tracking-widest text-gray-500 dark:text-gray-400">Home</h2>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed list-disc pl-5">
+              <ul className="space-y-2 text-base text-gray-700 dark:text-gray-300 leading-relaxed list-disc pl-5">
                 <li>I was born in Mumbai, India and grew up primarily in Dubai, U.A.E. Since leaving home for college, I have lived in Chicago, Toronto, Boston, Bhopal (briefly), and New York City.</li>
                 <li>NYC is comfortably my favorite city, it is a special place.</li>
                 <li>Home in the US is presently Boston, MA.</li>
@@ -33,7 +33,7 @@ const AboutMore: React.FC = () => {
 
             <div>
               <h2 className="text-lg font-semibold mb-4 uppercase tracking-widest text-gray-500 dark:text-gray-400">Work Experience</h2>
-              <ul className="space-y-2 text-gray-700 dark:text-gray-300 leading-relaxed list-disc pl-5">
+              <ul className="space-y-2 text-base text-gray-700 dark:text-gray-300 leading-relaxed list-disc pl-5">
                 <li>Contributions to global mental health research as part of the Mental Health for All Lab at Harvard Medical School and the non-profit Sangath, during 2019–2021</li>
                 <li>Two years as a healthcare consultant at Deloitte, during 2016–2018</li>
                 <li>A summer internship with the Ebola response team at the WHO during the 2014–16 Ebola pandemic</li>
