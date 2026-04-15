@@ -163,7 +163,7 @@ const TedStyleHome = () => {
                   Hi, I'm Rutvij. A resident doctor with interests in internal medicine, oncology, and healthcare delivery. My work brings together training in clinical medicine, social science, public health, and consulting, with the goal of expanding access to high-quality care.
                 </p>
                 <p>
-                  I received my MD from the Icahn School of Medicine at Mount Sinai. Previously, I earned an MPH from the Harvard T.H. Chan School of Public Health. I completed my undergraduate studies at Northwestern University, studying Political Science and Economics.
+                  I received my MD from the Icahn School of Medicine at Mount Sinai and my MPH from the Harvard T.H. Chan School of Public Health. I completed my undergraduate studies at Northwestern University where I studied Political Science and Economics.
                 </p>
                 <p>
                   Outside of medicine, I moonlight as a writer. I also maintain a deep interest in Indian history and politics. Other enduring interests include Test cricket, wildlife conservation, literary fiction, and overpriced cups of coffee.
