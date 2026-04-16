@@ -100,7 +100,7 @@ const TedStyleHome = () => {
                   { href: "#about", label: "About" },
                   { href: "#research", label: "Research" },
                   { href: "#writing", label: "Writing" },
-                  { href: "#ideas", label: "Ideas" },
+                  { href: "#field-notes", label: "Field Notes" },
                 ].map(({ href, label }) => (
                   <li key={href}>
                     <a
@@ -285,16 +285,24 @@ const TedStyleHome = () => {
               </div>
             </motion.section>
 
-            {/* Ideas Section */}
+            {/* Field Notes Section */}
             <motion.section
-              id="ideas"
+              id="field-notes"
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
             >
-              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Ideas</h2>
-              <p className="text-base text-gray-500 dark:text-gray-400 italic">Coming soon.</p>
+              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Field Notes</h2>
+              <div className="space-y-6">
+                {[
+                  "This is where short observations, links, and half-formed thoughts will live. A sentence or two, maybe three.",
+                ].map((note, index) => (
+                  <p key={index} className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
+                    {note}
+                  </p>
+                ))}
+              </div>
             </motion.section>
 
           </div>
