@@ -296,7 +296,7 @@ const TedStyleHome = () => {
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Field Notes</h2>
               <div className="space-y-6">
                 {[
-                  "This is where short observations, links, and half-formed thoughts will live. A sentence or two, maybe three.",
+                  "This is where short observations, links, and half-formed thoughts will live.",
                 ].map((note, index) => (
                   <p key={index} className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                     {note}
