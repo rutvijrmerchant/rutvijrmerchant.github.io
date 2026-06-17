@@ -160,16 +160,22 @@ const TedStyleHome = () => {
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">About</h2>
               <div className="space-y-4 text-base text-gray-700 dark:text-gray-300 leading-relaxed">
                 <p>
-                  Hi, I'm Rutvij. A resident doctor with interests in internal medicine, oncology, and healthcare delivery. My work brings together training in clinical medicine, social science, public health, and consulting, with the goal of expanding access to high-quality care.
+                  Hi, I'm Rutvij. A resident doctor at Beth Israel Deaconess Medical Center in Boston.
                 </p>
                 <p>
-                  I received my MD from the Icahn School of Medicine at Mount Sinai and my MPH from the Harvard T.H. Chan School of Public Health. I completed my undergraduate studies at Northwestern University where I studied Political Science and Economics.
+                  I grew up between Mumbai and Dubai.
                 </p>
                 <p>
-                  Outside of medicine, I moonlight as a writer. I also maintain a deep interest in Indian history and politics. Other enduring interests include Test cricket, wildlife conservation, literary fiction, and overpriced cups of coffee.
+                  My interests lie in cancer care and healthcare delivery. My work brings together training in medicine, social science, public health, and consulting, with the goal of expanding access to high-quality care both locally and globally. I received my MD from Mount Sinai, my MPH from Harvard T.H. Chan, and I completed my undergraduate studies at Northwestern in Political Science and Economics.
                 </p>
                 <p>
-                  The header shows the view from the family home in Breach Candy, Mumbai, a vantage point from which many dreams have been conceived, discarded, and reimagined.
+                  Outside of medicine, I write. A sample of my work can be found below.
+                </p>
+                <p>
+                  I also maintain a deep interest in Indian history and politics. Other enduring interests include Test cricket, wildlife conservation, and literary fiction.
+                </p>
+                <p>
+                  The header shows the view from the family home in Breach Candy, Mumbai, a spot from which many dreams have been conceived, discarded, and reimagined.
                 </p>
                 <div className="pt-2">
                   <Link
