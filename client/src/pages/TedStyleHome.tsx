@@ -163,7 +163,7 @@ const TedStyleHome = () => {
                   Hi, I'm Rutvij. A resident doctor at Beth Israel Deaconess Medical Center in Boston.
                 </p>
                 <p>
-                  I grew up between Mumbai and Dubai.
+                  I grew up between Mumbai and Dubai. The header shows the view from the family home in Breach Candy, Mumbai, a spot from which many dreams have been conceived, discarded, and reimagined.
                 </p>
                 <p>
                   My interests lie in cancer care and healthcare delivery. My work brings together training in medicine, social science, public health, and consulting, with the goal of expanding access to high-quality care locally and globally. I received my MD from Mount Sinai, my MPH from Harvard T.H. Chan, and I completed my undergraduate studies at Northwestern in Political Science and Economics.
@@ -173,9 +173,6 @@ const TedStyleHome = () => {
                 </p>
                 <p>
                   I also maintain a deep interest in Indian history and politics. Other enduring interests include Test cricket, wildlife conservation, and literary fiction.
-                </p>
-                <p>
-                  The header shows the view from the family home in Breach Candy, Mumbai, a spot from which many dreams have been conceived, discarded, and reimagined.
                 </p>
                 <div className="pt-2">
                   <Link
