@@ -195,27 +195,7 @@ const TedStyleHome = () => {
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Research</h2>
 
               <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                I study how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design.
-              </p>
-
-              <div className="space-y-4 mb-8">
-                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
-                  <p className="text-base font-semibold text-gray-900 dark:text-white mb-1.5">Technology-Enabled Care Delivery</p>
-                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Building and evaluating technology-enabled models of care that expand access and improve outcomes. My primary focus is cancer care delivery, informed by prior work in global mental health.
-                  </p>
-                </div>
-
-                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
-                  <p className="text-base font-semibold text-gray-900 dark:text-white mb-1.5">Health System Reform</p>
-                  <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Examining how health system design shapes care delivery. Areas of interest include strengthening state capacity to deliver care and studying value-based payment models.
-                  </p>
-                </div>
-              </div>
-
-              <p className="text-base text-gray-600 dark:text-gray-400">
-                Academic and peer-reviewed publications are available on{" "}
+                I study how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. Academic and peer-reviewed publications are available on{" "}
                 <a
                   href="https://scholar.google.com/citations?user=ju_E5LwAAAAJ"
                   target="_blank"
@@ -224,8 +204,27 @@ const TedStyleHome = () => {
                 >
                   Google Scholar
                 </a>
-                .
+                . My particular areas of interest include:
               </p>
+
+              <div className="space-y-4 mb-8">
+                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
+                  <p className="text-base font-semibold text-gray-900 dark:text-white mb-1.5">Technology-Enabled Care Delivery</p>
+                  <ul className="list-disc list-inside text-base text-gray-600 dark:text-gray-400 leading-relaxed space-y-1">
+                    <li>Building and evaluating technology-enabled models of care that expand access and improve outcomes</li>
+                    <li>My primary focus is cancer care delivery, informed by prior work in global mental health</li>
+                  </ul>
+                </div>
+
+                <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
+                  <p className="text-base font-semibold text-gray-900 dark:text-white mb-1.5">Health System Reform</p>
+                  <ul className="list-disc list-inside text-base text-gray-600 dark:text-gray-400 leading-relaxed space-y-1">
+                    <li>Examining how health system design shapes care delivery</li>
+                    <li>Strengthening state capacity to deliver care</li>
+                    <li>Studying value-based payment models</li>
+                  </ul>
+                </div>
+              </div>
             </motion.section>
 
             {/* Writing Section */}
