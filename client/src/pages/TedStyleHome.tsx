@@ -100,7 +100,6 @@ const TedStyleHome = () => {
                   { href: "#about", label: "About" },
                   { href: "#research", label: "Research" },
                   { href: "#writing", label: "Writing" },
-                  { href: "#field-notes", label: "Field Notes" },
                 ].map(({ href, label }) => (
                   <li key={href}>
                     <a
@@ -196,21 +195,21 @@ const TedStyleHome = () => {
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Research</h2>
 
               <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                My research examines how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. This work is focused on two complementary areas:
+                I study how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design.
               </p>
 
               <div className="space-y-4 mb-8">
                 <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
                   <p className="text-base font-semibold text-gray-900 dark:text-white mb-1.5">Technology-Enabled Care Delivery</p>
                   <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Developing and implementing technology-enabled models of care that expand access and improve outcomes. My primary focus is cancer care delivery, informed by prior work in global mental health.
+                    Building and evaluating technology-enabled models of care that expand access and improve outcomes. My primary focus is cancer care delivery, informed by prior work in global mental health.
                   </p>
                 </div>
 
                 <div className="p-5 border-l-2 border-gray-900 dark:border-gray-200 bg-gray-50 dark:bg-gray-800/40 rounded-r-lg">
                   <p className="text-base font-semibold text-gray-900 dark:text-white mb-1.5">Health System Reform</p>
                   <p className="text-base text-gray-600 dark:text-gray-400 leading-relaxed">
-                    Examining how health system design shapes the ability of systems to deliver high-quality, equitable care. Areas of interest include strengthening state capacity to govern health systems and studying alternative value-based payment models.
+                    Examining how health system design shapes care delivery. Areas of interest include strengthening state capacity to deliver care and studying value-based payment models.
                   </p>
                 </div>
               </div>
@@ -285,26 +284,6 @@ const TedStyleHome = () => {
                     </article>
                   ))
                 )}
-              </div>
-            </motion.section>
-
-            {/* Field Notes Section */}
-            <motion.section
-              id="field-notes"
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5 }}
-            >
-              <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Field Notes</h2>
-              <div className="space-y-6">
-                {[
-                  "This is where short observations, links, and half-formed thoughts will live.",
-                ].map((note, index) => (
-                  <p key={index} className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                    {note}
-                  </p>
-                ))}
               </div>
             </motion.section>
 
