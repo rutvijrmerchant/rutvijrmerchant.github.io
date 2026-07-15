@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { Mail, Linkedin, GraduationCap } from "lucide-react";
 import bannerImage from "@assets/3257D3DE-079F-4708-A347-4B1A64B5DDF5_1_105_c.jpeg";
 
-const tabs = ["Cricket", "Cities", "Medicine and Healthcare", "Politics"] as const;
+const tabs = ["Sports", "Cities", "Medicine and Healthcare", "Politics"] as const;
 type Tab = typeof tabs[number];
 
 const TedStyleHome = () => {
@@ -44,12 +44,20 @@ const TedStyleHome = () => {
       tab: "Cities" as Tab
     },
     {
+      title: "El Que No Salta, Es Un Inglés",
+      date: "2026",
+      excerpt: "He who does not jump is English. This is one of the most commonly heard chants at an Argentinian football game. Where does this special love for the English come from?",
+      link: "/essays/el-que-no-salta",
+      category: "Essay",
+      tab: "Sports" as Tab
+    },
+    {
       title: "Shifting Sands",
       date: "2020",
       excerpt: "Another swing from Tatenda Taibu, another boundary. In the space of a few minutes, the Zimbabwean teenager had silenced the highly partisan, largely Pakistani crowd...",
       link: "/essays/shifting-sands",
       category: "Article",
-      tab: "Cricket" as Tab
+      tab: "Sports" as Tab
     },
     {
       title: "On Ayodhya",

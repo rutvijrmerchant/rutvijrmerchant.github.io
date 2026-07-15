@@ -12,6 +12,7 @@ import WispsOfMemoryEssay from "@/pages/WispsOfMemoryEssay";
 import ShiftingSandsEssay from "@/pages/ShiftingSandsEssay";
 import FortsAmidMoundsEssay from "@/pages/FortsAmidMoundsEssay";
 import OnAyodhyaEssay from "@/pages/OnAyodhyaEssay";
+import ElQueNoSaltaEssay from "@/pages/ElQueNoSaltaEssay";
 import TedStyleHome from "@/pages/TedStyleHome";
 import { MobileMenuProvider } from "./contexts/MobileMenuContext";
 
@@ -27,6 +28,7 @@ function Router() {
       <Route path="/essays/shifting-sands" component={ShiftingSandsEssay} />
       <Route path="/essays/forts-amid-mounds" component={FortsAmidMoundsEssay} />
       <Route path="/essays/on-ayodhya" component={OnAyodhyaEssay} />
+      <Route path="/essays/el-que-no-salta" component={ElQueNoSaltaEssay} />
       <Route path="/ted-style" component={TedStyleHome} />
       {/* Fallback to 404 */}
       <Route component={NotFound} />
