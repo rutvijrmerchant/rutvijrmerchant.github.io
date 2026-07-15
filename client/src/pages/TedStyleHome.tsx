@@ -203,7 +203,7 @@ const TedStyleHome = () => {
               <h2 className="text-lg font-semibold mb-5 uppercase tracking-widest text-gray-500 dark:text-gray-400">Research</h2>
 
               <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed mb-6">
-                I study how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. Academic and peer-reviewed publications are available on{" "}
+                I study how health systems can deliver high-quality, equitable care through innovations in clinical practice and policy design. Academic and peer-reviewed publications are on{" "}
                 <a
                   href="https://scholar.google.com/citations?user=ju_E5LwAAAAJ"
                   target="_blank"
@@ -212,7 +212,7 @@ const TedStyleHome = () => {
                 >
                   Google Scholar
                 </a>
-                . My particular areas of interest include:
+                . Areas of interest include:
               </p>
 
               <div className="space-y-4 mb-8">
